@@ -29,8 +29,9 @@ function enqueue_scripts() {
 
 	//STYLE THEME
 	wp_enqueue_style('theme', get_template_directory_uri().'/css/theme.min.css', array(), $tema_version, 'all');
+	wp_enqueue_style('icon', get_template_directory_uri().'/css/icon.min.css', array(), $tema_version, 'all');
 
-    //CSS DEFAULT
+    	//CSS DEFAULT
 	wp_enqueue_style('default-style', get_stylesheet_uri(), array(), $tema_version, 'all');
 
 	//SCRIPT THEME JS
