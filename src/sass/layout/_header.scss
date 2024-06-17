@@ -1,0 +1,107 @@
+.l-header-site{
+    background-color: $primary;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 3;
+
+    @include media-breakpoint-up(xl){
+        .home &{
+            background-color: rgba($primary, .60);
+        }
+    }
+}
+
+.l-header-site__sticky{
+    position: fixed !important;
+    background-color: $primary;
+    -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+    -webkit-box-shadow: 0 10px 10px -10px rgba(#000, .35);
+    box-shadow: 0 10px 10px -10px rgba(#000, .35);
+
+    .home &{
+        background-color: $primary;
+    }
+
+    .l-header-site__middle{
+        display: none;
+    }
+}
+
+.l-brand {
+    background: #fff;
+    padding: 15px 50px;
+    position: relative;
+    margin-bottom: -35px;
+    z-index: 2;
+}
+
+.l-navbar-toggler {
+    width: 50px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+
+    .toggle-icon {
+        display: block;
+        height: 3px;
+        border-radius: 20px;
+        background: $white;
+        transition: all .2s linear;
+
+        &:nth-of-type(1) {
+            width: 100%;
+        }
+
+        &:nth-of-type(2) {
+            width: 70%;
+        }
+
+        &:nth-of-type(3) {
+            width: 40%;
+        }
+    }
+
+    &:hover {
+        .toggle-icon {
+            width: 100%;
+        }
+    }
+}
+
+// Flags Bar Menu
+#flags.size24 a.united-states[title="English"],
+.tool-container a.united-states[title="English"],
+a.single-language.united-states[title="English"] span.size24 {
+    background: url(../../../uploads/flag-usa.png) no-repeat !important;
+    background-size: cover !important;
+    width: 31px !important;
+    height: 30px !important;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+#flags.size24 a[title="Spanish"],
+.tool-container .tool-items a[title="Spanish"],
+a.single-language[title="Spanish"] span.size24 {
+    background: url(../../../uploads/flag-spanish.png) no-repeat !important;
+    background-size: cover !important;
+    width: 31px !important;
+    height: 30px !important;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+#flags.size24 a.brazil[title="Portuguese"],
+.tool-container a.brazil[title="Portuguese"],
+a.single-language.brazil[title="Portuguese"] span.size24 {
+    background: url(../../../uploads/flag-brazil.png) no-repeat !important;
+    background-size: cover !important;
+    width: 31px !important;
+    height: 30px !important;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}

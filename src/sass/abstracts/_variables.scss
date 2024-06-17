@@ -1,0 +1,74 @@
+// THEME COLORS
+$primary:   #105075;
+$secondary: #ee710c;
+$terciary:  #1391A1;
+$light:     #f4f4f4;
+$dark:      #292827;
+
+
+// BASE
+$font-family-base: 'Inria Sans', sans-serif;
+$font-size-base: 1.1rem; // 18px
+$body-color: #4d4d4d;
+
+// FONT WEIGHT
+//$font-weight-bolder: 900; // Extra bold
+
+// HEADING
+$headings-font-weight: 700; // bold
+// $headings-color: $secondary; // bold
+
+// $h1-font-size: 3.052rem;
+$h2-font-size: 2.6rem;
+// $h3-font-size: 1.953rem;
+// $h4-font-size: 1.563rem;
+// $h5-font-size: 1.25rem;
+// $h6-font-size: 1rem;
+
+// DISPLAY
+//$display-font-family: 'Roboto', sans-serif;
+//$display-font-weight: 700;
+
+$display-font-sizes: (
+    1: 5.625rem,
+    2: 4.5rem,
+    3: 4rem,
+    4: 3.5rem,
+    5: 3rem,
+    6: 2.5rem
+);
+
+// BUTTONS
+$btn-padding-y: 1rem;
+$btn-padding-x: 3rem;
+$btn-font-family: $font-family-base;
+$btn-font-size: 1rem;
+$btn-line-height: 1;
+$btn-white-space: nowrap;
+$btn-font-weight: 700;
+$btn-border-radius: 0px;
+$btn-border-width: 0px;
+
+//FORM-CONTROL
+//$input-border-color: $dark;
+//$input-focus-border-color: $secondary;
+$input-focus-box-shadow: none;
+$input-focus-width: 0;
+$input-border-radius: 0;
+$form-floating-label-transform: scale(.85) translateY(-1rem) translateX(.15rem);
+
+//CHECKS & RADIOS
+//$form-check-input-focus-border: none;
+//$form-check-input-focus-box-shadow: none;
+
+// ACCORDION
+// $accordion-border-radius: 0;
+// $accordion-border-width: 0;
+// $accordion-button-color: $secondary;
+// $accordion-button-bg: $light;
+// $accordion-button-active-bg: $primary;
+// $accordion-button-active-color: $light;
+// $accordion-button-focus-border-color: $light;
+// $accordion-button-focus-box-shadow: none;
+// $accordion-icon-color: $primary;
+// $accordion-icon-active-color: $light;

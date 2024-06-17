@@ -1,0 +1,21 @@
+// footer
+
+.l-footer__texto{
+
+    @include media-breakpoint-up(lg){
+        position: absolute;
+    }
+
+}
+
+.s-bl-pw {
+    a {
+        &:hover {
+            img {
+                animation-name: pulse;
+                animation-duration: .5s;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+}

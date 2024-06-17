@@ -1,0 +1,271 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?7pdmj2');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?7pdmj2#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?7pdmj2') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?7pdmj2') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?7pdmj2##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-medical {
+  &:before {
+    content: $icon-medical; 
+  }
+}
+.icon-data-protection {
+  &:before {
+    content: $icon-data-protection;     
+    color: #fff;
+  }
+}
+.icon-doctor {
+  &:before {
+    content: $icon-doctor; 
+  }
+}
+.icon-calendar1 {
+  &:before {
+    content: $icon-calendar1; 
+  }
+}
+.icon-money-bag {
+  &:before {
+    content: $icon-money-bag; 
+  }
+}
+.icon-book {
+  &:before {
+    content: $icon-book; 
+  }
+}
+.icon-user-circle-o {
+  &:before {
+    content: $icon-user-circle-o; 
+  }
+}
+.icon-youtube-play {
+  &:before {
+    content: $icon-youtube-play; 
+  }
+}
+.icon-caret-down {
+  &:before {
+    content: $icon-caret-down; 
+  }
+}
+.icon-circle-thin {
+  &:before {
+    content: $icon-circle-thin; 
+  }
+}
+.icon-circle {
+  &:before {
+    content: $icon-circle; 
+  }
+}
+.icon-map-o {
+  &:before {
+    content: $icon-map-o; 
+  }
+}
+.icon-map {
+  &:before {
+    content: $icon-map; 
+  }
+}
+.icon-map-marker {
+  &:before {
+    content: $icon-map-marker; 
+  }
+}
+.icon-calendar-o {
+  &:before {
+    content: $icon-calendar-o; 
+  }
+}
+.icon-calendar {
+  &:before {
+    content: $icon-calendar; 
+  }
+}
+.icon-whatsapp {
+  &:before {
+    content: $icon-whatsapp; 
+  }
+}
+.icon-linkedin {
+  &:before {
+    content: $icon-linkedin; 
+  }
+}
+.icon-instagram {
+  &:before {
+    content: $icon-instagram; 
+  }
+}
+.icon-facebook {
+  &:before {
+    content: $icon-facebook; 
+  }
+}
+.icon-facebook-f {
+  &:before {
+    content: $icon-facebook-f; 
+  }
+}
+.icon-https {
+  &:before {
+    content: $icon-https; 
+  }
+}
+.icon-home {
+  &:before {
+    content: $icon-home; 
+  }
+}
+.icon-folder {
+  &:before {
+    content: $icon-folder; 
+  }
+}
+.icon-clear {
+  &:before {
+    content: $icon-clear; 
+  }
+}
+.icon-source {
+  &:before {
+    content: $icon-source; 
+  }
+}
+.icon-topic {
+  &:before {
+    content: $icon-topic; 
+  }
+}
+.icon-double_arrow {
+  &:before {
+    content: $icon-double_arrow; 
+  }
+}
+.icon-keyboard_arrow_up {
+  &:before {
+    content: $icon-keyboard_arrow_up; 
+  }
+}
+.icon-keyboard_arrow_right {
+  &:before {
+    content: $icon-keyboard_arrow_right; 
+  }
+}
+.icon-keyboard_arrow_left {
+  &:before {
+    content: $icon-keyboard_arrow_left; 
+  }
+}
+.icon-keyboard_arrow_down {
+  &:before {
+    content: $icon-keyboard_arrow_down; 
+  }
+}
+.icon-remove {
+  &:before {
+    content: $icon-remove; 
+  }
+}
+.icon-location_on {
+  &:before {
+    content: $icon-location_on; 
+  }
+}
+.icon-add {
+  &:before {
+    content: $icon-add; 
+  }
+}
+.icon-eye-blocked {
+  &:before {
+    content: $icon-eye-blocked; 
+  }
+}
+.icon-eye {
+  &:before {
+    content: $icon-eye; 
+  }
+}
+.icon-star-empty {
+  &:before {
+    content: $icon-star-empty; 
+  }
+}
+.icon-rate {
+  &:before {
+    content: $icon-rate; 
+  }
+}
+.icon-star {
+  &:before {
+    content: $icon-star; 
+  }
+}
+.icon-favorite {
+  &:before {
+    content: $icon-favorite; 
+  }
+}
+.icon-bookmark {
+  &:before {
+    content: $icon-bookmark; 
+  }
+}
+.icon-search {
+  &:before {
+    content: $icon-search; 
+  }
+}
+.icon-mail-envelope-open {
+  &:before {
+    content: $icon-mail-envelope-open; 
+  }
+}
+.icon-tags {
+  &:before {
+    content: $icon-tags; 
+  }
+}
+.icon-tags1 {
+  &:before {
+    content: $icon-tags1; 
+  }
+}
+.icon-tag {
+  &:before {
+    content: $icon-tag; 
+  }
+}
+.icon-tag1 {
+  &:before {
+    content: $icon-tag1; 
+  }
+}
+

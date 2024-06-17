@@ -1,0 +1,24 @@
+$component: ".c-list-search, .c-list-striped";
+
+#{$component} {
+
+    li {
+        padding: 1rem !important;
+    }
+
+    li:nth-child(odd) {
+        background-color: #f7f7f7;
+        border-left: 4px solid $terciary;
+    }
+}
+
+.post-categories {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.post-categories a {
+	color: #fff;
+	text-decoration: none;
+}

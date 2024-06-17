@@ -1,0 +1,94 @@
+@import 'abstracts/mixins';
+@import 'abstracts/fonts';
+
+//@import url('https://i.icomoon.io/public/temp/eef8c08b8f/SBC/style.css');
+@import 'abstracts/variables';
+@import 'vendors/bootstrap';
+@import 'vendors/animate';
+@import 'abstracts/base';
+@import 'abstracts/utilities';
+
+
+// Components
+@import 'components/social';
+@import 'components/nav';
+@import 'components/page-header';
+@import 'components/breadcrumbs';
+@import 'components/pagination';
+@import 'components/lists';
+@import 'components/buttons';
+@import 'components/cards';
+
+
+
+//Layout
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/pages';
+@import 'layout/home';
+
+
+#preload {
+    position: fixed;
+    z-index: 1000;
+    background: $light;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .3s ease, visibility .5s;
+
+    img{
+      animation-name: pulse;
+      animation-duration: .5s;
+      animation-iteration-count: infinite
+    }
+
+}
+
+div[class*="swiper-button-"]{
+    color: $secondary;
+}
+
+.swiper-pagination-bullet{
+    background: none;
+    border: 1px solid $secondary;
+    border-radius: 50px;
+}
+
+.swiper-pagination-bullet-active{
+    background: $secondary;
+}
+
+// input que esconde ou mostra a senha
+.campo-senha {
+    position: relative;
+
+    &__ver {
+        width: 45px;
+        height: 100%;
+        color: $secondary;
+        //border-bottom: 1px solid $cor1;
+        background: transparent;
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        @include transition(all, ease, 0.2s);
+    }
+}
+
+.form-floating>label{
+    z-index: 1;
+}
+
+.form-floating>.form-control:focus~label::after, .form-floating>.form-control:not(:placeholder-shown)~label::after, .form-floating>.form-control-plaintext~label::after, .form-floating>.form-select~label::after {
+    background-color: transparent;
+}

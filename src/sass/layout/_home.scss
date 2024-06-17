@@ -1,0 +1,142 @@
+.l-featured-beneficios{
+
+    @include media-breakpoint-up(xl){
+        margin-top: -125px;
+    }
+}
+
+.l-featured-diretoria{
+
+    @include media-breakpoint-up(sm){
+
+        .swiper-button-prev{
+            right: 70px;
+            left: auto;
+        }
+
+        div[class*=swiper-button-]{
+            top: 9px;
+        }
+    }
+}
+
+
+.bg-mensagem{
+    position: relative;
+    background: #F3F3F3;
+    z-index: 1;
+}
+.bg-mensagem::after {
+    content: '';
+    background: url(../../../uploads/teste-site.png) no-repeat center;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.4;
+    filter: saturate(0);
+}
+
+
+.border-start-home {
+    border-left: 3px solid;
+    @extend .border-primary-subtle;
+
+    @include media-breakpoint-down(md) {
+        border: none;
+    }
+}
+
+
+// .img-quem{
+//     @include image-adjustment(cover, center, 100%, 200px);
+//     background: #ededed;
+//     border-radius: 15px;
+
+// }
+
+@scope (#associado){
+
+    .m-negative{
+        margin-top: -45px;
+    }
+
+    @include media-breakpoint-down(lg){
+        .m-negative{
+            margin-top: 50px;
+        }
+    }
+}
+
+// @media(min-width: 425px){
+
+//     .swiper.membrosSwipper{
+//         position: static;
+//     }
+
+//     .membrosSwipper  {
+
+//     }
+// }
+
+// .membrosSwipper div[class*=swiper-button-] {
+
+//     @media(min-width: 425px){
+//         top: 25px;
+//     }
+// }
+
+.swipper-button-circle{
+    border: 2px solid $secondary;
+    border-radius: 30px;
+    padding: 22px;
+    z-index: 1;
+
+    &::after {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}
+
+
+#associado{
+
+    .m-negative{
+        margin-top: -45px;
+
+        @include media-breakpoint-down(lg){
+            margin-top: 1.5rem;
+        }
+    }
+
+    .form-floating {
+
+        .form-control{
+            background: none;
+            border-radius: 5px;
+
+            &:focus~ label{
+                color: $white;
+
+                &::after{
+                    background: none;
+                }
+            }
+        }
+
+    }
+}
+
+#apoio{
+
+    .img-apoio{
+        cursor: pointer;
+        filter: grayscale(100%);
+        transition: all .2s ease;
+
+        &:hover{
+            filter: none;
+        }
+    }
+}

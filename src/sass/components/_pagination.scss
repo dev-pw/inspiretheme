@@ -1,0 +1,19 @@
+.c-paginacao{
+
+    .page-numbers {
+        padding: 10px 12px;
+        background: $terciary;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #fff;
+        transition: all .3s ease;
+
+        &:hover {
+            background: shade-color($terciary, 30%);
+        }
+    }
+
+    .page-numbers.current {
+        background: $primary;
+    }
+}

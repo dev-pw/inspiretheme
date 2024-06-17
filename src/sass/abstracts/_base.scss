@@ -1,0 +1,27 @@
+main {
+
+    padding-top: 128px;
+
+    @include media-breakpoint-up(md) {
+        padding-top: 144px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-top: 128px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding-top: 80px;
+    }
+
+    .home & {
+
+        @include media-breakpoint-up(xl) {
+            padding-top: 0;
+        }
+    }
+}
+
+.transition{
+    @include transition(all .3s ease);
+}

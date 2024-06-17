@@ -1,0 +1,152 @@
+// cards
+
+.c-card-post{
+
+    &__image{
+        @include image-adjustment(cover, center, 100%, 180px);
+    }
+}
+
+.c-card-paciente {
+    cursor: pointer;
+
+    @include media-breakpoint-up(xl) {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+
+        .title {
+            transform: translateY(30px);
+            transition: all .2s ease;
+        }
+
+        .content {
+            visibility: hidden;
+            opacity: 0;
+            transition: all .1s ease-in-out;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            background: linear-gradient(320deg, #3e39b4b0 7%, #792d6ac2 40%, #df68158f 95%);
+            width: 100%;
+            top: 5px;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            z-index: -1;
+            transition: all .3s ease;
+        }
+
+        &::after {
+            content: '\e909';
+            font-family: 'icomoon';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            background: #093f5b;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all .3s ease;
+            opacity: 0;
+        }
+
+        &:hover {
+
+            .title {
+                transform: translateY(0px);
+            }
+
+            .content {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            &::before {
+                opacity: 1;
+            }
+
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+}
+
+@include media-breakpoint-up(lg){
+
+    #congresso, #webinars{
+        min-height: 850px;
+    }
+
+    .c-card-agenda{
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: 120%;
+            width: 1000%;
+            left: -1000px;
+            box-shadow: 0px 0px 15px #00000050;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s ease-in-out;
+        }
+
+        &:hover{
+            &::after {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .btn-secondary::before {
+                opacity: 1;
+            }
+
+        }
+
+        .btn-secondary::before {
+            border-radius: 8px;
+        }
+    }
+
+    .c-card-image{
+        position: absolute;
+        right: 0px;
+        top: 0;
+        width: 530px;
+        height: 430px;
+        transition: all .5s ease;
+
+        @include media-breakpoint-down(lg){
+            width: 460px;
+            height: 360px;
+        }
+    }
+
+}
+
+.c-card-medico{
+    transition: all .3s ease;
+
+    &:hover{
+        transform: translateY(-10px);
+    }
+    
+    &::after {
+        content: '';
+        background: url(../../../uploads/keys.png) no-repeat center;
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        filter: invert(1);
+        opacity: .2;
+    }
+}

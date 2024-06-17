@@ -1,0 +1,152 @@
+// .internal{
+//     padding-top: 4rem;
+//     padding-bottom: 4rem;
+// }
+
+.entry-content-post {
+
+    >* {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    p {
+        @media (min-width: 791px) {
+            text-align: justify;
+        }
+    }
+
+    a {
+        @extend .text-break;
+        color: $secondary;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+            color: $secondary;
+        }
+    }
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+
+    .wp-element-button{
+      background-color: $secondary;
+      color: #fff ;
+      padding: 7px 30px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $primary;
+    }
+
+    h2 {
+        &:not(:first-child) {
+            margin-top: 4rem;
+        }
+    }
+
+    h3 {
+        &:not(:first-child) {
+            margin-top: 3rem;
+        }
+    }
+
+    ul {
+        @extend .pe-0;
+
+        li {
+            list-style: none;
+            padding-left: 30px;
+            line-height: 1.5;
+
+            &:not(:first-child) {
+                margin-top: .5rem;
+            }
+
+            &:before {
+                content: '\e902';
+                font-family: "icomoon";
+                font-weight: bold;
+                font-style: normal;
+                margin: 0px 20px 0px 10px;
+                text-decoration: none;
+                color: $primary;
+                font-size: 10px;
+                margin-left: -30px;
+            }
+        }
+    }
+
+    ol {
+        li {
+            line-height: 1.5;
+
+            &:not(:first-child) {
+                margin-top: .5rem;
+            }
+        }
+    }
+
+    .wp-bootstrap-blocks-button {
+
+        .btn{
+
+            &:hover{
+                text-decoration: none;
+            }
+        }
+
+        .btn-primary,
+        .btn-secondary{
+            color: #fff;
+            border-radius: 0px !important;
+        }
+    }
+
+    .img-informativo{
+      img[class*="wp-image-"] {
+        width: 100%;
+      }
+    }
+}
+
+.c-bloco-mensagem {
+    @extend .border-4, .border-start, .fw-bold, .ps-3, .fs-5;
+
+    &__primary{
+        @extend .border-primary, .text-primary;
+    }
+}
+
+
+.c-post-metadata {
+    a{
+        color: $dark;
+        text-decoration: none;
+        &:hover {
+            color: $dark;
+            text-decoration: underline;
+        }
+    }
+
+    &--light {
+        a {
+            color: $white;
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}

@@ -1,0 +1,112 @@
+.l-offcanvas-nav {
+    background-color: $primary;
+
+    @include media-breakpoint-up(xl) {
+        background-color: rgba($primary, .90);
+    }
+}
+
+.c-nav-menu-default{
+
+    height: 100%;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    z-index: 100;
+
+    >nav{
+
+        ul,
+        ul ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+
+            li.menu-item {
+                list-style: none;
+                cursor: pointer;
+                margin: 0;
+                border-bottom: 1px solid rgba($white, .1);
+
+                &.current-menu-item {
+
+                    &>a {
+                        background-color: $white;
+                        color: $primary;
+                    }
+
+                    ul {
+                        display: block;
+                    }
+                }
+
+                >a {
+                    color: $white;
+                    font-weight: 600;
+                    text-decoration: none;
+                    display: block;
+                    padding: 18px 0 18px 25px;
+                    font-size: 1.2rem;
+                    outline: 0;
+                    -webkit-transition: all 200ms ease-in;
+                    -moz-transition: all 200ms ease-in;
+                    -o-transition: all 200ms ease-in;
+                    -ms-transition: all 200ms ease-in;
+                    transition: all 200ms ease-in;
+
+                    &:hover {
+                        color: $secondary;
+                    }
+
+                }
+            }
+
+            li.menu-item-has-children {
+                position: relative;
+
+                >a {
+
+                    &:after {
+                        content: '\e911';
+                        font-family: icomoon;
+                        font-style: normal;
+                        margin: 0;
+                        text-decoration: none;
+                        color: $white;
+                        font-size: 1.3rem;
+                        position: absolute;
+                        right: 13px;
+                        -webkit-transition: all .3s linear;
+                        -o-transition: all .3s linear;
+                        transition: all .3s linear;
+                    }
+
+                    &:hover {
+
+                        &:after {
+                            color: $secondary;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        ul ul.sub-menu {
+            display: none;
+
+            li {
+
+                a {
+                    font-size: 1rem;
+                    color: $white;
+                    padding: 13px 0 13px 35px;
+                }
+            }
+        }
+    }
+}

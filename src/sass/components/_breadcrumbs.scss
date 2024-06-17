@@ -1,0 +1,19 @@
+#breadcrumbs {
+    @extend .text-dark, .small, .mb-0;
+
+    span span {
+        @extend .mx-2;
+
+        &:first-child {
+            @extend .ms-0;
+        }
+
+        a {
+            @extend .text-dark, .text-decoration-none;
+
+            &:hover {
+                @extend .text-decoration-underline;
+            }
+        }
+    }
+}
