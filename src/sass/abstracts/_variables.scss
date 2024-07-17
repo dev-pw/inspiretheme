@@ -5,6 +5,8 @@ $terciary:  #1391A1;
 $light:     #f4f4f4;
 $dark:      #292827;
 
+// CAMINHO DA PASTA UPLOADS WP
+$assetPath: "../../../../../wp-content/uploads";
 
 // BASE
 $font-family-base: 'Inria Sans', sans-serif;
@@ -18,12 +20,12 @@ $body-color: #4d4d4d;
 $headings-font-weight: 700; // bold
 // $headings-color: $secondary; // bold
 
-// $h1-font-size: 3.052rem;
-$h2-font-size: 2.6rem;
-// $h3-font-size: 1.953rem;
-// $h4-font-size: 1.563rem;
-// $h5-font-size: 1.25rem;
-// $h6-font-size: 1rem;
+$h1-font-size: 2.5rem;
+$h2-font-size: 2.0rem;
+$h3-font-size: 1.5rem;
+$h4-font-size: 1.25rem;
+$h5-font-size: 1.125rem;
+$h6-font-size: 1rem;
 
 // DISPLAY
 //$display-font-family: 'Roboto', sans-serif;
