@@ -33,8 +33,3 @@
 
 </header>
 
-<?php
-    if( get_field('privado') == 'true' ){
-      include(dirname(__FILE__)."/form_action/util/apenas_logado.php");
-    }
-?>
