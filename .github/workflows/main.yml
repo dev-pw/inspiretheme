@@ -1,7 +1,7 @@
 on: 
   push:
     branches:
-      - main
+      - develop
 name: 🚀 Adicionando arquivos no FTP
 jobs:
   web-deploy:
