@@ -1,11 +1,11 @@
 .btn-sociais {
     @include btn-sociais(
-        $primary,
-        $primary,
+        $white,
         $white,
         $primary,
         $white,
-        $primary
+        $primary,
+        $white
     );
 }
 

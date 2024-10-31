@@ -8,7 +8,7 @@
 
 ?>
 
-<footer class="bg-primary py-3">
+<footer class="bg-primary-dark py-3">
     <div class="container">
         <div class="row gy-4 align-items-center justify-content-between position-relative">
             <div class="col-12 col-lg-auto position-relative z-1">

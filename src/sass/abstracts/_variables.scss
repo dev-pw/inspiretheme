@@ -4,6 +4,7 @@ $primary-dark:  #133958;
 $secondary:     #32CA95;
 $light:         #f4f4f4;
 $dark:          #292827;
+$white:         #ffffff;
 
 // CAMINHO DA PASTA UPLOADS WP
 $assetPath: "../../../../../wp-content/uploads";
@@ -44,12 +45,16 @@ $display-font-sizes: (
 $btn-padding-y: 1rem;
 $btn-padding-x: 3rem;
 $btn-font-family: $font-family-base;
-$btn-font-size: 1rem;
+$btn-font-size: 1.2rem;
 $btn-line-height: 1;
 $btn-white-space: nowrap;
 $btn-font-weight: 700;
-$btn-border-radius: 0px;
-$btn-border-width: 0px;
+$btn-border-radius: 10px;
+$btn-border-width: 1px;
+$btn-link-color: $white;
+$btn-link-hover-color: $white;
+
+$gradient: linear-gradient(45deg, $primary-dark, $secondary);
 
 //FORM-CONTROL
 //$input-border-color: $dark;

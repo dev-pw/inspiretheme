@@ -3,7 +3,7 @@
         <div class="row justify-content-lg-end">
             <div class="col-md-6">
                 <h2> <?= get_the_title(23); ?> </h2>
-                <p> <?= get_the_excerpt(23); ?> </p>
+                <p class="fs-4 mb-4"> <?= get_the_excerpt(23); ?> </p>
                 <a href="<?= the_permalink(23); ?>" target="_blank" class="btn btn-secondary" rel="noopener noreferrer"> Saiba mais </a>
             </div>
         </div>
