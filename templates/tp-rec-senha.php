@@ -3,12 +3,12 @@
 /**
 
 * Template Name: Recuperar Senha
-pwtheme
+inspiretheme
 * Template Post Type: post, page
 
 * @package WordPress
 
-* @subpackage pwtheme
+* @subpackage inspiretheme
 
 *
 

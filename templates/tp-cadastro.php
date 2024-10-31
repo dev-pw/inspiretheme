@@ -4,7 +4,7 @@
  * Template Name: Cadastro
  * Template Post Type: post, page
  * @package WordPress
- * @subpackage pwtheme
+ * @subpackage inspiretheme
  *
  */
 get_header();

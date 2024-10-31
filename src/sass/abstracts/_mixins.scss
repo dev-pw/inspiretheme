@@ -4,112 +4,113 @@
 
 //TRANSITION
 @mixin transition ($valor1, $valor2, $valor3){
-    -webkit-transition: $valor1 $valor2 $valor3;
-    -o-transition: $valor1 $valor2 $valor3;
-    transition: $valor1 $valor2 $valor3;
+  -webkit-transition: $valor1 $valor2 $valor3;
+  -o-transition: $valor1 $valor2 $valor3;
+  transition: $valor1 $valor2 $valor3;
 }
 
 //BORDER RADIUS
 @mixin border-radius ($radius){
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    -ms-border-radius: $radius;
-    -o-border-radius: $radius;
-    border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
 }
 
 //VALOR MAXIMO
 @mixin max($max){
-    @media(max-width: $max){
-        @content;
-    }
+  @media(max-width: $max){
+      @content;
+  }
 }
 
 //VALOR MINIMO
 @mixin min($min){
-    @media(min-width: $min){
-        @content;
-    }
+  @media(min-width: $min){
+      @content;
+  }
 }
 
 // DISPLAY FLEX
 @mixin d-flex($justify, $align){
-  display: flex;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  justify-content: $justify;
-  align-items: $align;
+display: flex;
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+justify-content: $justify;
+align-items: $align;
 }
 
 // TRANSFORM
 
 @mixin transform-scale($scale){
-  -webkit-transform: scale($scale); /* WebKit */
-  -moz-transform: scale($scale); /* Mozilla */
-  -o-transform: scale($scale); /* Opera */
-  -ms-transform: scale($scale); /* Internet Explorer */
-  transform: scale($scale); /* CSS3 */
+-webkit-transform: scale($scale); /* WebKit */
+-moz-transform: scale($scale); /* Mozilla */
+-o-transform: scale($scale); /* Opera */
+-ms-transform: scale($scale); /* Internet Explorer */
+transform: scale($scale); /* CSS3 */
 }
 
 @mixin transform-translateY($perc){
-  -webkit-transform: translateY($perc); /* WebKit */
-  -moz-transform: translateY($perc); /* Mozilla */
-  -o-transform: translateY($perc); /* Opera */
-  -ms-transform: translateY($perc); /* Internet Explorer */
-  transform: translateY($perc); /* CSS3 */
+-webkit-transform: translateY($perc); /* WebKit */
+-moz-transform: translateY($perc); /* Mozilla */
+-o-transform: translateY($perc); /* Opera */
+-ms-transform: translateY($perc); /* Internet Explorer */
+transform: translateY($perc); /* CSS3 */
 }
 
 // BOX SHADOW
 
 @mixin b-shadow($x, $y, $b, $s, $c) {
-  -webkit-box-shadow: $x $y $b $s $c;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  -moz-box-shadow:    $x $y $b $s $c;  /* Firefox 3.5 - 3.6 */
-  box-shadow:         $x $y $b $s $c;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+-webkit-box-shadow: $x $y $b $s $c;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+-moz-box-shadow:    $x $y $b $s $c;  /* Firefox 3.5 - 3.6 */
+box-shadow:         $x $y $b $s $c;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
 // BOTAO EXEMPLO 100%
 
 @mixin btn($cor-fundo, $cor-texto, $cor-fundo-hover, $cor-texto-hover){
-  @include d-flex(center, center);
-  @include transition(all, ease, 0.2s);
-  @include border-radius(10px);
-  background-color: $cor-fundo;
-  color: $cor-texto;
-  padding: 4px;
-  width: 100%;
-  font-weight: 500;
-  width: auto;
-  height: auto;
-  text-decoration: none;
+@include d-flex(center, center);
+@include transition(all, ease, 0.2s);
+@include border-radius(10px);
+background-color: $cor-fundo;
+color: $cor-texto;
+padding: 4px;
+width: 100%;
+font-weight: 500;
+width: auto;
+height: auto;
+text-decoration: none;
 
-  &:hover{
-    background-color: $cor-fundo-hover;
-    color: $cor-texto-hover;
-  }
+&:hover{
+  background-color: $cor-fundo-hover;
+  color: $cor-texto-hover;
+}
 }
 
-@mixin btn-sociais($cor-border, $cor-texto, $cor-fundo-hover, $cor-texto-hover){
-  @include d-flex(center, center);
-  @include transition(all, ease, 0.2s);
-  @include border-radius(50px);
-  background-color: transparent;
-  color: $cor-texto;
-  padding: 5px;
-  width: 35px;
-  height: 35px;
-  text-decoration: none;
-  border: 2px solid $cor-border;
+@mixin btn-sociais($cor-border-rs, $cor-bg-rs, $cor-texto-rs, $cor-border-rs-hover, $cor-bg-rs-hover, $cor-texto-rs-hover) {
+@include d-flex(center, center);
+@include transition(all, ease, 0.2s);
+@include border-radius(50px);
+background-color: $cor-bg-rs;
+color: $cor-texto-rs;
+padding: 5px;
+width: 35px;
+height: 35px;
+text-decoration: none;
+border: 2px solid $cor-border-rs;
 
-  &:hover{
-    background-color: $cor-fundo-hover;
-    color: $cor-texto-hover;
-  }
+&:hover {
+  border: 2px solid $cor-border-rs-hover;
+  background-color: $cor-bg-rs-hover;
+  color: $cor-texto-rs-hover;
+}
 }
 
 @mixin image-adjustment($fit, $position, $width, $height){
-  object-fit: $fit;
-  object-position: $position;
-  width: $width;
-  height: $height;
+object-fit: $fit;
+object-position: $position;
+width: $width;
+height: $height;
 }

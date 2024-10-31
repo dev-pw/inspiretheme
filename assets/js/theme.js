@@ -40,6 +40,17 @@ jQuery(document).ready(function ($) {
       }
    }
 
+   /*=================================================
+   Inserindo Lighbox na Galeria do WordPress
+   =================================================*/
+
+   $('.entry-content-post').attr('id', 'thumbnails-gallery');
+
+   lightGallery(document.getElementById('thumbnails-gallery'), {
+      selector: 'figure > a',
+      thumbnail: true,
+   });
+
     /*=================================================
     CONFIGURAÇÃO JQUERY MASK
     =================================================*/

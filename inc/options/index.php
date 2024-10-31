@@ -1,6 +1,6 @@
 <?php
 /*
-    Source Name: Options Tabs 
+    Source Name: Options Tabs
     Description: Options Tab Painel Theme
     Author: Lucas Brandão
     Version: 2.0
@@ -18,7 +18,7 @@ function opcoes_site() {
         'Opções do Site', // Title Page
         'Opções do Site', // Title Menu
         'manage_options', // Capacidade de Acesso
-        'site_options', // Slug Menu 
+        'site_options', // Slug Menu
         'render_content', // Function que faz a renderização do conteúdo dentro da Page
         '', // Icon Menu
         2 // Position Menu
@@ -38,9 +38,9 @@ function render_content() {
         // Como preencher os campos do array ( 'Nome da Aba' => array('id do settings section', 'class do icon de exibição'))
         'Header' => array( 'header', 'dashicons dashicons-table-row-before'),
         'Footer' => array( 'footer', 'dashicons dashicons-table-row-after'),
-        'Popup' => array( 'popup', 'dashicons dashicons-external'),
         'Redes Sociais' => array( 'rs', 'dashicons dashicons-admin-links'),
         'Contato' => array( 'info', 'dashicons dashicons-clipboard'),
+        'Popup' => array( 'popup', 'dashicons dashicons-external'),
 
     );
 
@@ -57,36 +57,39 @@ add_action('admin_init', 'options_theme');
 
 function options_theme() {
 
-    // Como preencher os campos do array ( 'Titulo <hr>' => array('ID da Section', 'CallBack Session', 'Page the field belongs to') ); 
+    // Como preencher os campos do array ( 'Titulo <hr>' => array('ID da Section', 'CallBack Session', 'Page the field belongs to') );
     $add_settings_section = array(
         'Header <hr>' => array('header', '', 'header'),
         'Footer <hr>' => array('footer', '', 'footer'),
-        'Popup <hr>' => array('popup', '', 'popup'),
         'Redes Sociais <hr>' => array('rs', '', 'rs'),
         'Informações de Contato <hr>' => array('info', '', 'info'),
+        'Popup <hr>' => array('popup', '', 'popup'),
     );
-    
-    // Como preencher os campos do array ( 'Titulo' => array('ID Fields', 'Function Render CallBack', 'Page the field belongs to', 'Section to which the field belongs') ); 
+
+    // Como preencher os campos do array ( 'Titulo' => array('ID Fields', 'Function Render CallBack', 'Page the field belongs to', 'Section to which the field belongs') );
     $add_settings_field = array(
         'Logo Header' => array('options_logo_header', 'cp_logo_header', 'header', 'header'),
         'Logo Preload' => array('options_logo_preload', 'cp_logo_preload', 'header', 'header'),
         'Logo da Barra de Menu' => array('options_menubar', 'cp_menubar', 'header', 'header'),
         'Logo' => array('options_logo_footer', 'cp_logo_footer', 'footer', 'footer'),
-        'Ativar Popup' => array('options_ativar_pop', 'cp_ativar_pop', 'popup', 'popup'),
-        'Imagem Popup' => array('options_img_pop', 'cp_img_pop', 'popup', 'popup'),
-        'Descrição' => array('options_desc', 'cp_desc', 'footer', 'footer'),
-        'CopyRight Text' => array('options_copy', 'cp_copy', 'footer', 'footer'),
+
         'Facebook' => array('options_rs_1', 'cp_rs_1', 'rs', 'rs'),
         'Instagram' => array('options_rs_2', 'cp_rs_2', 'rs', 'rs'),
         'Youtube' => array('options_rs_3', 'cp_rs_3', 'rs', 'rs'),
         'Linkedin' => array('options_rs_4', 'cp_rs_4', 'rs', 'rs'),
-        'WhatsApp' => array('options_rs_5', 'cp_rs_5', 'rs', 'rs'),
-        'Email' => array('options_info_1', 'cp_info_1', 'info', 'info'),
+
         'Endereço' => array('options_info_2', 'cp_info_2', 'info', 'info'),
-        'Telefone' => array('options_info_3', 'cp_info_3', 'info', 'info'),
         'Link Google' => array('options_info_4', 'cp_info_4', 'info', 'info'),
         'Rota Maps' => array('options_info_5', 'cp_info_5', 'info', 'info'),
         'Rota Waze' => array('options_info_6', 'cp_info_6', 'info', 'info'),
+        'Iframe Maps' => array('options_info_9', 'cp_info_9', 'info', 'info'),
+        'Email' => array('options_info_1', 'cp_info_1', 'info', 'info'),
+        'Telefone' => array('options_info_3', 'cp_info_3', 'info', 'info'),
+        'WhatsApp' => array('options_info_7', 'cp_info_7', 'info', 'info'),
+        'WhatsApp link' => array('options_info_8', 'cp_info_8', 'info', 'info'),
+
+        'Ativar Popup' => array('options_ativar_pop', 'cp_ativar_pop', 'popup', 'popup'),
+        'Imagem Popup' => array('options_img_pop', 'cp_img_pop', 'popup', 'popup'),
     );
 
     // Header
@@ -108,7 +111,7 @@ function options_theme() {
             ''.$value[3].'' // Section to which the field belongs
         );
 
-        // Como preencher os campos do array ('ID Section', 'ID Field'); 
+        // Como preencher os campos do array ('ID Section', 'ID Field');
         register_setting(''.$value[3].'', ''.$value[0].'');
     }
 
@@ -126,7 +129,7 @@ function cp_menubar() {
     </div>
     <div class="upload_button_div">
         <span class="page-title-action media_upload_button" id="menubar-media"></span>
-        <span class="page-title-action remove-image" id="reset_menubar" rel="menubar"> Remover </span> 
+        <span class="page-title-action remove-image" id="reset_menubar" rel="menubar"> Remover </span>
     </div>
     ';
 }
@@ -139,7 +142,7 @@ function cp_logo_header() {
     </div>
     <div class="upload_button_div">
         <span class="page-title-action media_upload_button" id="logo_header-media"></span>
-        <span class="page-title-action remove-image" id="reset_logo_header" rel="logo_header"> Remover </span> 
+        <span class="page-title-action remove-image" id="reset_logo_header" rel="logo_header"> Remover </span>
     </div>
     ';
 }
@@ -152,7 +155,7 @@ function cp_logo_preload() {
     </div>
     <div class="upload_button_div">
         <span class="page-title-action media_upload_button" id="logo_preload-media"></span>
-        <span class="page-title-action remove-image" id="reset_logo_preload" rel="logo_preload"> Remover </span> 
+        <span class="page-title-action remove-image" id="reset_logo_preload" rel="logo_preload"> Remover </span>
     </div>
     ';
 }
@@ -168,19 +171,9 @@ function cp_logo_footer() {
     </div>
     <div class="upload_button_div">
         <span class="page-title-action media_upload_button" id="footerlogo-media"></span>
-        <span class="page-title-action remove-image" id="reset_footerlogo" rel="footerlogo"> Remover </span> 
+        <span class="page-title-action remove-image" id="reset_footerlogo" rel="footerlogo"> Remover </span>
     </div>
     ';
-}
-
-function cp_desc() {
-    $name = 'options_desc';
-    echo '<textarea name="'.$name.'" id="desc" rows="10">'.esc_attr( get_option( $name ) ).'</textarea>';
-}
-
-function cp_copy() {
-    $name = 'options_copy';
-    echo '<input type="text" name="'.$name.'" value="'.esc_attr( get_option( $name ) ).'" placeholder="&copy; Copyright '.date('Y').'. BrandsDev WordPress Theme">';
 }
 
 //CallBack de Popup -----------------------------------------------------------------------------------
@@ -210,7 +203,7 @@ function cp_img_pop() {
     </div>
     <div class="upload_button_div">
         <span class="page-title-action media_upload_button" id="imgpopup-media"></span>
-        <span class="page-title-action remove-image" id="reset_imgpopup" rel="imgpopup"> Remover </span> 
+        <span class="page-title-action remove-image" id="reset_imgpopup" rel="imgpopup"> Remover </span>
     </div>
     ';
 }
@@ -240,7 +233,7 @@ function cp_rs_4() {
 
 function cp_rs_5() {
     $name = 'options_rs_5';
-    echo '<input type="text" name="'.$name.'" value="'.esc_attr( get_option( $name ) ).'" placeholder="Exemplo: +55 (11) 9 4002-8922">';
+    echo '<input type="text" name="'.$name.'" value="'.esc_attr( get_option( $name ) ).'" placeholder="Exemplo: https://twitter.com/username">';
 }
 
 // CallBack de Contato ---------------------------------------------------------------------------
@@ -273,6 +266,22 @@ function cp_info_5() {
 function cp_info_6() {
     $name = 'options_info_6';
     echo '<input type="text" name="'.$name.'" value="'.esc_attr( get_option( $name ) ).'" placeholder="Exemplo: https://www.waze.com/pt-PT/live-map/directions/google-brasil-av.-brigadeiro-faria-lima-3477-sao-paulo?to=place.w.205325852.2053389593.3483233">';
+}
+
+function cp_info_7(){
+    $name = 'options_info_7';
+    echo '<input type="text" name="' . $name . '" value="' . esc_attr(get_option($name)) . '" placeholder="Exemplo: +55 (11) 9 4002-8922">';
+}
+
+function cp_info_8(){
+    $name = 'options_info_8';
+    echo '<input type="text" name="' . $name . '" value="' . esc_attr(get_option($name)) . '" placeholder="Exemplo: https://wa.me/telefone">';
+}
+
+function cp_info_9()
+{
+    $name = 'options_info_9';
+    echo '<input type="text" name="' . $name . '" value="' . esc_attr(get_option($name)) . '" placeholder="">';
 }
 
 

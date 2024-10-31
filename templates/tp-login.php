@@ -3,7 +3,7 @@
  * Template Name: Login
  * Template Post Type: post, page
  * @package WordPress
- * @subpackage pwtheme
+ * @subpackage inspiretheme
  *
 */
 

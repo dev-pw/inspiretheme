@@ -2,7 +2,7 @@
 /**
  * Index
  * @package WordPress
- * @subpackage pwtheme 
+ * @subpackage inspiretheme 
  *
 */
  get_template_part('front-page');

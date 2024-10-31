@@ -3,7 +3,7 @@
  * Template Name: Contato
  * Template Post Type: post, page
  * @package WordPress
- * @subpackage pwtheme
+ * @subpackage inspiretheme
  *
 */
 

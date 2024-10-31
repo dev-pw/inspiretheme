@@ -2,7 +2,7 @@
 /**
  * Footer
  * @package WordPress
- * @subpackage pwtheme
+ * @subpackage inspiretheme
  *
 */
 if( !is_page(79) ){

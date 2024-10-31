@@ -2,7 +2,7 @@
 /**
  * Front-page
  * @package WordPress
- * @subpackage pwtheme
+ * @subpackage inspiretheme
  *
 */
  get_header(); 

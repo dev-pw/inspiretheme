@@ -3,7 +3,7 @@
  * Single
  *
  * @package WordPress
- * @subpackage pwtheme
+ * @subpackage inspiretheme
  *
  */
 

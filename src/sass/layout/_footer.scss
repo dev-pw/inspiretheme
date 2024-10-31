@@ -1,11 +1,16 @@
-// footer
+.l-footer {
+    background-color: $primary-dark;
 
-.l-footer__texto{
-
-    @include media-breakpoint-up(lg){
-        position: absolute;
+    .btn-sociais {
+        @include btn-sociais(
+            $secondary,
+            $secondary,
+            $primary-dark,
+            $secondary,
+            transparent,
+            $secondary
+        );
     }
-
 }
 
 .s-bl-pw {

@@ -2,7 +2,7 @@
 /**
  * Header
  * @package WordPress
- * @subpackage pwtheme
+ * @subpackage inspiretheme
  *
 */
 ?>

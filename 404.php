@@ -3,7 +3,7 @@
  * 404
  *
  * @package WordPress
- * @subpackage pwtheme
+ * @subpackage inspiretheme
  *
  */
 

@@ -3,7 +3,7 @@
  * Search
  *
  * @package WordPress
- * @subpackage pwtheme
+ * @subpackage inspiretheme
  *
  */
 

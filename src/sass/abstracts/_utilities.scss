@@ -1,24 +1,27 @@
-// padding
+.transition {
+    @include transition(all .3s ease);
+}
 
-.u-pt-5{
+// padding
+.u-pt-5 {
     padding-top: 5rem;
 }
 
-.u-pb-5{
+.u-pb-5 {
     padding-bottom: 5rem;
 }
 
-.u-py-5{
+.u-py-5 {
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
 
 
 // hover
-
 .u-hover-translate-y-top {
     @extend .transition;
-    @include media-breakpoint-up(xl){
+
+    @include media-breakpoint-up(xl) {
         &:hover {
             transform: translateY(-15%);
         }
@@ -35,7 +38,7 @@
     }
 }
 
-.u-hover-bg-degrade{
+.u-hover-bg-degrade {
 
     &::before {
         position: absolute;
@@ -55,21 +58,67 @@
     }
 }
 
-.u-hover-shadow{
-    transition: all .1s linear;
-    &:hover{
-        @extend .shadow;
-        transform: scale(1.01);
+.u-hover-shadow {
+    @include media-breakpoint-up('xl') {
+
+        @include transition(all .1s linear);
+        &:hover {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            transform: scale(1.01);
+        }
     }
 }
 
 
 // gradient
-
 .u-hr-gradient {
     margin: 0;
     height: 10px;
     background: linear-gradient(320deg, #3e39b4 7%, #792d6a 40%, #df6815 95%);
     border: 0;
     opacity: 1;
+}
+
+// outros
+.u-overflow-cards{
+    //@include media-breakpoint-down('lg'){
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+    //}
+}
+
+.u-bloco-mensagem {
+    @extend .border-4, .border-start, .fw-bold, .ps-3;
+
+    &__primary {
+        @extend .border-primary, .text-primary;
+    }
+}
+
+.u-paragrafo-striped{
+
+    p{
+        padding: 1rem;
+        margin-bottom: 0;
+        border-bottom: 1px solid $primary;
+        font-weight: bold;
+    }
+
+    p:nth-child(even){
+        background-color: $light;
+    }
+}
+
+.u-section-striped {
+
+    &__item:first-child{
+        padding-top: 0;
+    }
+
+    &__item:nth-child(even) {
+        background-color: $light;
+    }
 }

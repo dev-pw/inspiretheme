@@ -6,7 +6,7 @@
 
 *
 
-* Template Nampwthemeinir senha
+* Template Naminspirethemeinir senha
 
 * Template Post Type: page
 
@@ -14,7 +14,7 @@
 
 * @package WordPress
 
-* @subpackage pwtheme
+* @subpackage inspiretheme
 
 *
 

@@ -3,7 +3,7 @@
  * Blog (Home.php)
  *
  * @package WordPress
- * @subpackage pwtheme
+ * @subpackage inspiretheme
  *
  */
 

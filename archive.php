@@ -3,7 +3,7 @@
  * Archive
  *
  * @package WordPress
- * @subpackage pwtheme
+ * @subpackage inspiretheme
  *
  */
 

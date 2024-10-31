@@ -2,7 +2,7 @@
 /**
  * Functions
  * @package WordPress
- * @subpackage pwtheme
+ * @subpackage inspiretheme
  *
 */
 
@@ -29,9 +29,9 @@ function enqueue_scripts() {
 
 	//STYLE THEME
 	wp_enqueue_style('theme', get_template_directory_uri().'/assets/css/theme.min.css', array(), $tema_version, 'all');
-	wp_enqueue_style('icon', get_template_directory_uri().'/assets/css/icon.min.css', array(), $tema_version, 'all');
+	wp_enqueue_style('icon', get_template_directory_uri().'/assets/icons/style.css', array(), $tema_version, 'all');
 
-    	//CSS DEFAULT
+	//CSS DEFAULT
 	wp_enqueue_style('default-style', get_stylesheet_uri(), array(), $tema_version, 'all');
 
 	//SCRIPT THEME JS
@@ -39,6 +39,11 @@ function enqueue_scripts() {
 
 	//SCRIPT FORMS JS
 	wp_enqueue_script( 'forms-js', get_template_directory_uri().'/assets/js/forms.js', array('jquery'), $tema_version, true );
+	
+	// LIGHTGALLERY JS 
+	wp_enqueue_style('lightGallery', 'https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css', array(), $tema_version, 'all');
+	wp_enqueue_script( 'lightGallery', 'https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.js', array('jquery'), $tema_version, true );
+	
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
