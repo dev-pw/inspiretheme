@@ -2,14 +2,14 @@
 
     .page-numbers {
         padding: 10px 12px;
-        background: $terciary;
+        background: $primary-dark;
         border-radius: 5px;
         text-decoration: none;
         color: #fff;
         transition: all .3s ease;
 
         &:hover {
-            background: shade-color($terciary, 30%);
+            background: shade-color($primary-dark, 30%);
         }
     }
 

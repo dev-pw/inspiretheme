@@ -1,3 +1,23 @@
 .btn-sociais {
-    @include btn-sociais(#fff, #fff, #fff, $primary);
+    @include btn-sociais(
+        $primary,
+        $primary,
+        $white,
+        $primary,
+        $white,
+        $primary
+    );
+}
+
+.s-btn-sociais-secondary{
+
+    .btn-sociais{
+        @include btn-sociais($secondary,
+            $secondary,
+            $primary-dark,
+            $secondary,
+            transparent,
+            $secondary
+        );
+    }
 }
